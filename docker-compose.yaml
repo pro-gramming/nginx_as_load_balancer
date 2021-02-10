@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  server1:
+    build: ./config_and_index/server1
+    container_name: tmachine1
+
+  server2:
+    build: ./config_and_index/server2
+    container_name: tmachine2
+
+  nload_balancer: 
+    build: . 
+    container_name: loadbalancer
+    ports:
+      - 8080:8080
+    depends_on: 
+      - server1
+      - server2
