@@ -1,2 +1,2 @@
 FROM httpd:latest
-COPY ./index.html /usr/local/apache2/htdocs/index.html
+RUN echo "This is app server2 " > /usr/local/apache2/htdocs/index.html
