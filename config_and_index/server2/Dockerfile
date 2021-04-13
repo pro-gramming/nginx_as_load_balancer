@@ -1,2 +1,2 @@
 FROM httpd:latest
-RUN echo "This is app server2 " > /usr/local/apache2/htdocs/index.html
+RUN echo "<h3>Hello from SERVER 2 !!</h3>" > /usr/local/apache2/htdocs/index.html
