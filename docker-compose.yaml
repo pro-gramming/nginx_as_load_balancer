@@ -14,7 +14,7 @@ services:
     container_name: server2
 
   nload_balancer: 
-    build: ./nginxConfig
+    build: ./nginx_config
     container_name: loadbalancer
     ports:
       - 8080:8080
