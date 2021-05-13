@@ -2,12 +2,16 @@ version: "3"
 
 services:
   server1:
-    build: ./config_and_index/server1
-    container_name: tmachine1
+    image: httpd:latest
+    volumes:
+      - ./server1/index.html:/usr/local/apache2/htdocs/index.html
+    container_name: server1
 
   server2:
-    build: ./config_and_index/server2
-    container_name: tmachine2
+    image: httpd:latest
+    volumes:
+      - ./server2/index.html:/usr/local/apache2/htdocs/index.html
+    container_name: server2
 
   nload_balancer: 
     build: . 
